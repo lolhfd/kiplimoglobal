@@ -1,0 +1,30 @@
+/* Your custom css code goes here */
+
+/* --- Bootstrap 5 + vanilla-JS upgrade overrides --- */
+
+/* Scroll-reveal: elements start hidden and are shown once revealed by JS */
+.probootstrap-animate.probootstrap-animated {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Hero slide: FlexSlider JS was removed, so display the slide via CSS */
+.probootstrap-slider .slides,
+.probootstrap-slider .slides > li {
+  display: block;
+}
+.probootstrap-slider .slides > li {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* Respect users who prefer reduced motion: reveal everything immediately */
+@media (prefers-reduced-motion: reduce) {
+  .probootstrap-animate {
+    opacity: 1 !important;
+    visibility: visible !important;
+    -webkit-animation: none !important;
+    animation: none !important;
+  }
+}
